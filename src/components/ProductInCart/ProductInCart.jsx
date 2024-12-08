@@ -1,11 +1,10 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addCount, revoweCount } from '../../Redux/Reducers/CartSlice';
 import styles from './ProductInCart..module.css';
 
 export const ProductInCart = ({item}) => {
   const dispatch = useDispatch();
-  const {products} = useSelector(state => state.cart);
   const fulPrice = item.price * item.count;
 
   return (

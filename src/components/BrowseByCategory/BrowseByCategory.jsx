@@ -9,7 +9,7 @@ export const BrowseByCategory = () => {
       <SectionTop title={'Categories'} subtitle={'Browse By Category'} />
       <div className={styles.block}>
          {
-            productList.browseByCategory.map(e => <div className={styles.img} key={e.img}>
+            productList.browseByCategory.map(e => <div className={styles.img} key={e.id}>
                   <img src={e.img} alt="" />
                   <span>{e.title}</span>
                </div>)

@@ -10,7 +10,7 @@ export const BestSelling = () => {
       <SectionTop title={'This Month'} subtitle={'Best Selling Products'} />
       <div className={styles.block}>
         {
-          productList.bestSellingProducts.map(e => <CartItem key={e.title} item={e} />)
+          productList.bestSellingProducts.map(e => <CartItem key={e.id} item={e} />)
         }
       </div>
     </section>

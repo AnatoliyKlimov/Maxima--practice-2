@@ -11,7 +11,7 @@ export const ExploreOurPro = () => {
       <SectionTop title={'Our Products'} subtitle={'Explore Our Products'} />
       <div className={styles.block}>
       {
-         productList.exploreOurProducts.map(e => <CartItem key={e.title} item={e}/>)
+         productList.exploreOurProducts.map(e => <CartItem key={e.id} item={e}/>)
       }
       </div>
       <Button name={'View All Products'} width={234} margin={`60px auto`}  />

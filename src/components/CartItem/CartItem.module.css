@@ -54,10 +54,6 @@
    cursor: pointer;
 }
 
-.img img {
-   width: 80%;
-}
-
 .add {
    opacity: 0;
    position: absolute;
