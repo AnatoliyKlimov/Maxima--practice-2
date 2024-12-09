@@ -46,7 +46,7 @@ export const CartItem = ({item}) => {
           <span className={styles.price}>${item.price}</span>
           { item.oldprice && <del><span className={styles.oldprice}>{item.oldprice}</span></del>}
       </div>
-      <div>
+      <div className={styles.rating}>
         <img src={stars} alt="" />
         <span>(88)</span>
       </div>

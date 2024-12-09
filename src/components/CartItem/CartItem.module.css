@@ -98,3 +98,10 @@
 .oldprice {
    color: #00000053;
 }
+
+.rating {
+   display: flex;
+   height: 20px;
+   align-content: center;
+   gap: 8px;
+}

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Favorities } from '../../components/Favorities/Favorities';
+import { SectionTop } from '../../components/SectionsTop/SectionTop';
+import { CartItem } from '../../components/CartItem/CartItem';
 import { productList } from '../../components/productList';
 import stars from '../../images/stars.png';
 import iconAuto from '../../images/delivery-icon1.png';
@@ -9,6 +11,7 @@ import styles from './CartPage.module.css';
 
 export const CartPage = () => {
 
+  const sizes = ['XS', 'S', 'M', 'L', 'XL'];
 
    const {id} = useParams();
    const allProducts = [
@@ -90,11 +93,14 @@ export const CartPage = () => {
             <div className={styles.sizeBlock}>
               <span>Size:</span>
               <div className={styles.sizeCheckBlock}>
-                <div className={styles.sizeCheck}>XS</div>
-                <div className={styles.sizeCheck}>S</div>
-                <div className={styles.sizeCheck}>M</div>
-                <div className={styles.sizeCheck}>L</div>
-                <div className={styles.sizeCheck}>XL</div>
+                {
+                  sizes.map(e => <div
+                    key={e}
+                    className={styles.sizeCheck}
+                    >
+                      {e}
+                    </div>)
+                }
               </div>
             </div>
             <div className={styles.buy}>
@@ -125,6 +131,15 @@ export const CartPage = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className={styles.related_block}>
+        <SectionTop title='Related item' subtitle="" />
+        <div className={styles.block}>
+          {
+            productList.flashSales.map(e => <CartItem key={e.id} item={e} />)
+          }
         </div>
       </section>
     </div>
